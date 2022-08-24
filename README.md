@@ -7,14 +7,23 @@ Before using the code, all the input data and variables should be prepared.
 For each customer, the time information (month/day/hour/minute) with the corresponding temperature at that time and the total consumption information are needed as input. To perform the EV load disaggregation, several steps needs to be done. 
 1. Use EV_Presence_Detection.ipynb to classify customers into two groups (customers with EV/customers without EV).
 2. Use Charging_Rate_Estimation.ipynb to estimate the charging rate for EV customers. 
-3. Use Disaggregation.ipynb and the estimated charging rates from step2 to do EV load disaggregation.
+3. Use EV_Load_Disaggregation.ipynb and the estimated charging rates from step2 to do EV load disaggregation.
 
 # EV Presence Detection
 This part tries to identify whether a customer owns an EV or not. 
-- Input: the information from individual customer (should be preprared as mentioned above).
+- Input: information from individual customer (should be preprared as mentioned above).
 - Output: estimatd charging rate, average charging hours, average temperature during charging hours.
 The three outputs will used to classify customers into with group/without EV group according to the strandards proposed in the paper.
 
+# Charging Rate Estimation
+This part tries to estimate the charging rate of EV owners.
+- Input: information from customers who are identified as owning EVs.
+- Output: estimated charging rate for each customer
+
+# EV Load Disaggregation
+This part tries to disaggregation the EV load from the total load of individual customers.
+- Input: information from customers who own EVs as well as the estimated charging rate from step2
+- Output: EV charging load profile for each customer (including start, end, and charging rate for each charging period)
 
 
 
