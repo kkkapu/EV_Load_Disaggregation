@@ -11,6 +11,10 @@ For each customer, the time information (month/day/hour/minute) with the corresp
 
 # EV Presence Detection
 This part tries to identify whether a customer owns an EV or not. 
-- Input: The information from individual customer should be preprared as mentioned above
+- Input: the information from individual customer (should be preprared as mentioned above).
+- Output: estimatd charging rate, average charging hours, average temperature during charging hours.
+The three outputs will used to classify customers into with group/without EV group according to the strandards proposed in the paper.
+
+
 
 
