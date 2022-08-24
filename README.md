@@ -4,4 +4,7 @@ The problem of disaggregating BTM EV load traces from smart meter data traces is
 
 #How to use
 Before using the code, all the input data and variables should be prepared. 
-For each customers, the time information (month/day/hour/minute) and the total consumption information are needed as input. To performe the EV load disaggregation, several steps needs to be done. 1. classify customers into two groups (customers with EV/customers without EV) by using EV_customer.ipynb and NonEV_customer.ipynb (this part needs to be updated) as well as the standards proposed in the paper [link]. 2. Use Charging_Rate_Estimation.ipynb to estimate the charging rate for EV customers. 3) EV load disaggregation is performed though Disaggregation.ipynb and the estimated charging rates are needed as input (from step2). 
+For each customers, the time information (month/day/hour/minute) and the total consumption information are needed as input. To performe the EV load disaggregation, several steps needs to be done. 
+1. classify customers into two groups (customers with EV/customers without EV) by using EV_customer.ipynb and NonEV_customer.ipynb (this part needs to be updated) as well as the standards proposed in the paper [link]. 
+2. Use Charging_Rate_Estimation.ipynb to estimate the charging rate for EV customers. 
+3) EV load disaggregation is performed though Disaggregation.ipynb and the estimated charging rates are needed as input (from step2). 
