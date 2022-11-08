@@ -24,18 +24,21 @@ To perform the EV load disaggregation, several steps needs to be done.
 2. Use Charging_Rate_Estimation.ipynb to estimate the charging rate for EV customers. 
 3. Use EV_Load_Disaggregation.ipynb and the estimated charging rates from step2 to do EV load disaggregation.
 
-# EV Presence Detection (EV_Presence_Detection.ipynb)
+# EV Presence Detection 
+(EV_Presence_Detection.ipynb)
 This part tries to identify whether a customer owns an EV or not. 
 - Input: information from individual customer (should be preprared as mentioned above).
 - Output: estimatd charging rate, average charging hours, average temperature during charging hours.
 The three outputs will used to classify customers into with group/without EV group according to the standards proposed in the paper.
 
-# Charging Rate Estimation (Charging_Rate_Estimation.ipynb)
+# Charging Rate Estimation 
+(Charging_Rate_Estimation.ipynb)
 This part tries to estimate the charging rate of EV owners.
 - Input: information from customers who are identified as owning EVs.
 - Output: estimated charging rate for each customer
 
-# EV Load Disaggregation (EV_Load_Disaggregation.ipynb)
+# EV Load Disaggregation 
+(EV_Load_Disaggregation.ipynb)
 This part tries to disaggregation the EV load from the total load of individual customers.
 - Input: information from customers who own EVs as well as the estimated charging rate from step2
 - Output: EV charging load profile for each customer (including start, end, and charging rate for each charging period)
