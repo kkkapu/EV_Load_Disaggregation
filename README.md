@@ -4,7 +4,7 @@ The problem of disaggregating BTM EV load traces from smart meter data traces is
 
 # How to use
 Before using the code, all the input data and variables should be prepared. 
-For each customer, the time information (month/day/hour/minute) with the corresponding temperature at that time and the total consumption information are needed as input. The sample data file can be found in the "sample data" folder and it contains the following variables.
+For each customer, the time information (month/day/hour/minute) with the corresponding temperature at that time and the total consumption information are needed as input. The sample data file can be found in the "sample data" folder and it contains the following variables:
 - dataid: the id of the customer
 - local_15min: the time index
 - grid: the netload data
