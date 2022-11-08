@@ -16,7 +16,6 @@ For each customer, the time information (month/day/hour/minute) with the corresp
 - Minute: minute of the hour (between 0 and 59)
 - temperature: temperature at the given time index
 - air1: the air conditioning load
-- weekday: day of the week (between 0 and 6)
 - consumption: the ground truth total load (= the netload + the ground truth solar generation) 
 
 To perform the EV load disaggregation, several steps needs to be done. 
