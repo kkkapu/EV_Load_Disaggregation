@@ -7,7 +7,7 @@ Before using the code, all the input data and variables should be prepared.
 For each customer, the time information (month/day/hour/minute) with the corresponding temperature at that time and the total consumption information are needed as input. The sample data file can be found in the "sample data" folder and it contains the following variables:
 - dataid: the id of the customer
 - local_15min: the time index
-- grid: the netload data
+- grid: the net load data
 - solar: ground truth of the solar generation
 - car: the EV charging load
 - Month: month of the year (between 1 and 12)
@@ -16,25 +16,25 @@ For each customer, the time information (month/day/hour/minute) with the corresp
 - Minute: minute of the hour (between 0 and 59)
 - temperature: temperature at the given time index
 - air1: the air conditioning load
-- consumption: the ground truth total load (= the netload + the ground truth solar generation) 
+- consumption: the ground truth total load (= the net load + the ground truth solar generation) 
 
-To perform the EV load disaggregation, several steps needs to be done. 
+To perform the EV load disaggregation, the following steps are needed.
 1. Use EV_Presence_Detection.ipynb to classify customers into two groups (customers with EV/customers without EV).
 2. Use Charging_Rate_Estimation.ipynb to estimate the charging rate for EV customers. 
-3. Use EV_Load_Disaggregation.ipynb and the estimated charging rates from step2 to do EV load disaggregation.
+3. Use EV_Load_Disaggregation.ipynb and the estimated charging rates from step 2 to perform EV load disaggregation.
 
 # EV Presence Detection 
 (EV_Presence_Detection.ipynb)
-This part tries to identify whether a customer owns an EV or not. 
-- Input: information from individual customer (should be preprared as mentioned above).
-- Output: estimatd charging rate, average charging hours, average temperature during charging hours.
-The three outputs will used to classify customers into with group/without EV group according to the standards proposed in the paper.
+This part identifies whether a customer owns an EV or not. 
+- Input: information from an individual customer (should be prepared as mentioned above).
+- Output: estimated charging rate, average charging hours, average temperature during charging hours.
+The three outputs will used to classify customers into a group with EV / a group without EV. 
 
 # Charging Rate Estimation 
 (Charging_Rate_Estimation.ipynb)
-This part tries to estimate the charging rate of EV owners.
+This part estimates the charging rates of EV owners.
 - Input: information from customers who are identified as owning EVs.
-- Output: estimated charging rate for each customer
+- Output: an estimated charging rate for each customer
 
 # EV Load Disaggregation 
 (EV_Load_Disaggregation.ipynb)
